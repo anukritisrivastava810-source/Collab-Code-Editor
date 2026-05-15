@@ -211,6 +211,11 @@
 }
 .navbar-room-icon {
   opacity: 0.6;
+  transition: opacity 0.2s;
+}
+[data-theme="light"] .navbar-room-icon {
+  opacity: 0.9;
+  color: #374151;
 }
 .navbar-room-name {
   font-size: 0.82rem;
@@ -219,6 +224,9 @@
 }
 .navbar-separator {
   opacity: 0.4;
+}
+[data-theme="light"] .navbar-separator {
+  opacity: 0.7;
 }
 .navbar-file-name {
   font-size: 0.82rem;
@@ -248,7 +256,7 @@
 .navbar-icon-btn {
   background: transparent;
   border: none;
-  color: #E6EAF1;
+  color: var(--icon-color);
   opacity: 0.8;
   cursor: pointer;
   display: flex;
@@ -256,11 +264,12 @@
   justify-content: center;
   padding: 6px;
   border-radius: 6px;
-  transition: opacity 0.15s, background 0.15s;
+  transition: opacity 0.15s, background 0.15s, color 0.15s;
 }
 .navbar-icon-btn:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--icon-hover-bg);
+  color: var(--icon-hover-color);
 }
 .navbar-users-btn {
   position: relative;
@@ -329,7 +338,7 @@
   position: relative;
   background: transparent;
   border: none;
-  color: #E6EAF1;
+  color: var(--icon-color);
   font-size: 1.2rem;
   width: 44px;
   height: 44px;
@@ -338,22 +347,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
   margin: 4px 0;
 }
 .activity-btn svg {
   flex-shrink: 0;
 }
 .activity-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--icon-hover-bg);
+  color: var(--icon-hover-color);
 }
 .activity-btn--active {
   background: #2563EB;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
 }
 .activity-btn--active svg {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .activity-btn-icon { line-height: 1; }
 .activity-badge {
@@ -405,6 +415,10 @@
   opacity: 0.8;
   flex-shrink: 0;
 }
+[data-theme="light"] .panel-title-icon {
+  opacity: 1;
+  color: #374151;
+}
 .panel-header {
   padding: 10px 14px 8px;
   border-bottom: 1px solid var(--border-color);
@@ -434,6 +448,11 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+[data-theme="light"] .panel-header-btn {
+  opacity: 0.9;
+  color: #374151;
+  border-color: #d1d5db;
 }
 .panel-header-btn:hover {
   opacity: 1;

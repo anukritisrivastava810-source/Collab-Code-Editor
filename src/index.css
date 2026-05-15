@@ -9,6 +9,9 @@
   --input-text: #f8f8f2;
   --box-shadow: rgba(0,0,0,0.3);
   --accent-color: #007acc;
+  --icon-color: #E6EAF1;
+  --icon-hover-bg: rgba(255, 255, 255, 0.08);
+  --icon-hover-color: #ffffff;
 }
 
 [data-theme="light"] {
@@ -22,6 +25,9 @@
   --input-text: #1c1e29;
   --box-shadow: rgba(0,0,0,0.1);
   --accent-color: #007acc;
+  --icon-color: #4B5563;
+  --icon-hover-bg: rgba(0, 0, 0, 0.05);
+  --icon-hover-color: #374151;
 }
 
 body {
